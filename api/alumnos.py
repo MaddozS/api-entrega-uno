@@ -27,7 +27,7 @@ def get_alumno(id_alumno: int, response: Response):
     response.status_code = 404
     return {'message': 'Alumno no encontrado'}
 
-@router.put("/{id_alumno}", status_code=201)
+@router.put("/{id_alumno}", status_code=200)
 def put_alumno(id_alumno: int, alumno: Alumno):
   alumnos[id_alumno] = alumno
   return alumno

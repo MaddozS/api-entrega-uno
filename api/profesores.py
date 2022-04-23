@@ -27,7 +27,7 @@ def get_profesor(id_profesor: int, response: Response):
     response.status_code = 404
     return {'message': 'Profesor no encontrado'}
 
-@router.put("/{id_profesor}", status_code=201)
+@router.put("/{id_profesor}", status_code=200)
 def put_profesor(id_profesor: int, profesor: Profesor):
   profesores[id_profesor] = profesor
   return profesor
